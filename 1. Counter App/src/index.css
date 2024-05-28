@@ -1,13 +1,57 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --hover: #ffc600;
+  --backgroundColor: #ffffffe0;
+  --countColor: #343538;
+  --btnText: #ffffff;
+  --borderColor: #ff7f50;
+}
+
+body {
+  font-family: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  background: var(--backgroundColor);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--countColor);
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+/* Element styling */
+.container .number {
+  font-size: 6rem;
+}
+
+.btn-container {
+  width: 40rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+
+.btn {
+  font-family: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-size: 4rem;
+  background: var(--countColor);
+  color: var(--btnText);
+  cursor: pointer;
+  border-color: var(--borderColor);
+  border-width: 5px;
+}
+
+.btn:hover {
+  background: var(--hover);
 }
