@@ -8,6 +8,18 @@ const Todo = () => {
   const [todos, SetTodos] = useState([]);
   const [input, setInput] = useState("");
 
+  // Event Handlers
+  const inputHandler = (e) => setInput(e.target.value);
+  const handleSubmit = () => {
+    SetTodos((todos) =>
+      todos.concat({
+        text: input,
+        id: generateId(),
+      })
+    );
+    setInput("");
+  };
+
   return (
     <>
       <h1>Project Todo - List</h1>
