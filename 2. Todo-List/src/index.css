@@ -7,9 +7,99 @@
 }
 
 :root {
-  --main-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  --primary-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  --default-font-size: 1.5rem;
+  --primary-color: #f4edff;
+  --secondary-color: #e3d1ff;
+  --third-color: #e0daeb;
+  --btn-primary: #454545;
+  --text-primary: #fff;
+  --text-secondary: #333333;
+  --accentColor: #ff6f61;
+  --primaryBorder: inset 0 0 0 2px rgb(51, 51, 51);
+  --BackColor: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: var(--primary-font);
+  background: var(--BackColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 3.3rem;
+}
+
+.container {
+  background: var(--secondary-color);
+  margin: 60px 0px;
+  padding: 85px;
+  box-shadow: 1px 1px 18px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+input {
+  font-family: var(--primary-font);
+  font-size: var(--default-font-size);
+  background: var(--primary-color);
+  padding: 12px;
+  border: none;
+  outline: none;
+  width: 450px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in;
+}
+
+input:focus {
+  box-shadow: var(--primaryBorder);
+  border-radius: 10px;
+}
+
+button {
+  font-family: var(--primary-font);
+  font-size: var(--default-font-size);
+  box-shadow: var(--primaryBorder);
+  color: var(--btn-primary);
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: none;
+}
+
+button:hover {
+  color: var(--text-primary);
+  background: var(--btn-primary);
+  border-radius: 50px;
+}
+
+.close {
+  padding: 5px 10px;
+}
+
+.todos-list {
+  margin-top: 3rem;
+}
+
+.todo {
+  font-size: var(--default-font-size);
+  background: var(--primary-color);
+  border-left: 5px solid var(--accentColor);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 7px 7px 20px;
+  margin: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.todo:hover {
+  border-radius: 10px;
 }
