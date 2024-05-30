@@ -19,6 +19,7 @@ const Todo = () => {
     );
     setInput("");
   };
+  const removeTodo = (id) => SetTodos((todos) => todos.filter((t) => t.id !== id));
 
   return (
     <>
