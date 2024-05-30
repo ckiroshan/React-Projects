@@ -8,8 +8,62 @@
 
 :root {
   --main-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  --default-font-size: 1rem;
+  --text-heading: #fff;
+  --text-items: rgb(68, 68, 68);
+  --back-color: #fbab7e linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  --card-color: rgba(255, 249, 249, 0.361);
 }
 
 body {
   font-family: var(--main-font);
+  background: var(--back-color);
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.card {
+  background: var(--card-color);
+  color: var(--text-items);
+  font-size: 12px;
+  margin: 20px;
+  padding: 30px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 18px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 18px -5px rgba(0, 0, 0, 0.75);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+p {
+  font-size: var(--default-font-size);
+  font-weight: bold;
+}
+
+img {
+  border-radius: 5px;
+  height: 280px;
+  width: 350px;
+}
+
+.heading {
+  color: var(--text-heading);
+  margin-top: 20px;
+  text-align: center;
+  font-size: 3.3rem;
 }
