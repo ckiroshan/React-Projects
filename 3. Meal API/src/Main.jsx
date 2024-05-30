@@ -11,3 +11,16 @@ const Main = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const itemsList = items.map(({ strMeal, strMealThumb, idMeal }) => {
+    return (
+      <div key={idMeal}>
+        <section className="card">
+          <img src={strMealThumb} alt="Meal thumbnail" />
+          <section className="content">
+            <p>{strMeal}</p>
+            <p>#{idMeal}</p>
+          </section>
+        </section>
+      </div>
+    );
+  });
