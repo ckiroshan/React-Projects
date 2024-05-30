@@ -24,3 +24,13 @@ const Main = () => {
       </div>
     );
   });
+
+  return (
+    <>
+      <h1 className="heading">Meal API - Image Gallery</h1>
+      <div className="items-container">{itemsList}</div>
+    </>
+  );
+};
+
+export default Main;
