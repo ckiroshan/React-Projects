@@ -5,9 +5,20 @@ const Main = () => {
   const [textColor, setTextColor] = useState("#1b1b1b");
   const [buttonStyle, setButtonStyle] = useState("white");
   const [headingText, setHeadingText] = useState("Welcome To The \n Real World \n 😇");
+  function handleClick() {
+    const isLightMode = backgroundColor === "white";
+    setBackgroundColor(isLightMode ? "#1b1b1b" : "white");
+    setTextColor(isLightMode ? "#ffa31a" : "#1b1b1b");
+    setButtonStyle(isLightMode ? "#1b1b1b" : "white");
+  }
+
   return (
     <>
-      <h1 className="heading">Toggle Color App</h1>
+      <section style={{ backgroundColor, color: textColor }}>
+        <button onClick={handleClick} style={{ buttonStyle, color: textColor, border: `5px solid ${textColor}` }}>
+          {backgroundColor === "#1b1b1b" ? "Dark Mode" : "Light Mode"}
+        </button>
+      </section>
     </>
   );
 };
