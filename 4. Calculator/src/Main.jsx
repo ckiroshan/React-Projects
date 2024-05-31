@@ -7,6 +7,11 @@ const Main = () => {
     setInputValue(inputValue + value);
   }
 
+  function calculate() {
+    let answers = eval(inputValue);
+    setInputValue(answers);
+  }
+
   function clear() {
     setInputValue("");
   }
@@ -47,6 +52,9 @@ const Main = () => {
           0
         </span>
         <span onClick={() => display(".")}>.</span>
+        <span onClick={() => calculate()} className="btn-orange">
+          =
+        </span>
       </form>
     </>
   );
