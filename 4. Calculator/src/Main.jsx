@@ -5,7 +5,10 @@ const Main = () => {
 
   return (
     <>
-      <h1>Hello Calculator!</h1>
+      <h1 className="heading">Calculator App</h1>
+      <form name="calc" className="calculator">
+        <input type="text" className="value" value={inputValue} />
+      </form>
     </>
   );
 };
