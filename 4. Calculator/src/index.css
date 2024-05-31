@@ -8,8 +8,11 @@
 
 :root {
   --main-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
-  --default-font-size: 18px;
-  --back-color: #1b1b1b;
+  --back-color: #1b1b1b radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
+  --white-color: #fff;
+  --black-color: #000;
+  --text-size: 2.4rem;
+  --active-btn: #ff9100;
 }
 
 body {
@@ -19,4 +22,70 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.heading {
+  color: var(--white-color);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 3.5rem;
+  /* text-shadow: 2px 1px 10px rgba(0, 0, 0, 0.7); */
+}
+
+.calculator {
+  background: var(--black-color);
+  padding: 12px;
+  position: inherit;
+  display: grid;
+  border-radius: 35px;
+  box-shadow: 1px 1px 18px -5px rgba(255, 255, 255, 0.479);
+}
+
+.calculator input.value {
+  font-size: var(--text-size);
+  grid-column: span 4;
+  height: 100px;
+  background: var(--black-color);
+  color: var(--white-color);
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.calculator span {
+  display: grid;
+  font-size: var(--text-size);
+  width: auto;
+  height: 60px;
+  background: #333333;
+  place-items: center;
+  color: var(--white-color);
+  border-radius: 20px;
+  margin: 10px 5px 5px 5px;
+}
+
+.calculator span:active {
+  background-color: var(--active-btn);
+  color: var(--white-color);
+}
+
+.calculator .clear {
+  grid-column: span 2;
+  width: 95%;
+}
+
+.calculator .btn-grey {
+  color: var(--black-color);
+  background-color: #a5a5a5;
+}
+
+.calculator span.zero {
+  grid-column: span 2;
+  width: 95%;
+}
+
+.calculator .btn-orange {
+  background-color: #f1a33b;
 }
