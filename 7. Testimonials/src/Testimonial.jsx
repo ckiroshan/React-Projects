@@ -8,6 +8,12 @@ function Testimonial() {
   return (
     <div className="container">
       <h1 className="heading">Testimonial Component</h1>
+      <div className="testimonials">
+        <div key={currentIndex} className="testimonials-content">
+          <div className="testimonials-quote">" {testimonials[currentIndex].quote} "</div>
+          <div className="testimonials-author">- {testimonials[currentIndex].author} -</div>
+        </div>
+      </div>
     </div>
   );
 }
