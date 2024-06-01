@@ -19,7 +19,16 @@ const HiddenSearchBar = () => {
           <input type="text" placeholder="Just a searchbar!" autoFocus onBlur={() => setShowInput(false)} />
         ) : (
           <div className="icon-text-wrapper">
-      <h1>Hey</h1>
+            <span
+              className="search-text"
+              onClick={() => {
+                setShowInput(true);
+                setBgColor("#333");
+              }}
+            >
+              Looking 💭 for something?
+              <FaSearch className="search-icon" />
+            </span>
           </div>
         )}
       </section>
