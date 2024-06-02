@@ -28,6 +28,19 @@ const Validate = () => {
         <div className="image-container">
           <img className="card-image" src={loginImage} alt="" />
         </div>
+        <form>
+          <input type="text" placeholder="Name" style={{ borderColor: userColor }} value={username} onChange={(e) => setUserName(e.target.value)} />
+          <p className="error">{errorUsername}</p>
+          <input type="text" placeholder="Email" style={{ borderColor: emailColor }} value={email} onChange={(e) => setEmail(e.target.value)} />
+          <p className="error">{errorEmail}</p>
+          <input type="password" placeholder="Password" style={{ borderColor: passwordColor }} value={password} onChange={(e) => setPassword(e.target.value)} />
+          <p className="error">{errorPassword}</p>
+          <input type="password" placeholder="Confirm Password" style={{ borderColor: confirmPasswordColor }} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          <p className="error">{errorConfirmPassword}</p>
+          <button className="btn-submit" onClick={validate}>
+            Submit
+          </button>
+        </form>
       </div>
     </>
   );
