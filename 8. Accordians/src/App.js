@@ -6,6 +6,9 @@ const App = () => {
     <div>
       <h1 className="heading">Accordion Component</h1>
       <div className="accordion">
+        {accordionData.map(({ title, content }) => {
+          return <Accordion title={title} content={content} key={Math.random() * 100} />;
+        })}
       </div>
     </div>
   );
