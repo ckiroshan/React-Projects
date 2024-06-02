@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Validate from "./Validate";
 
 function App() {
