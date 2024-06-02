@@ -1,4 +1,5 @@
 import { useState } from "react";
+import loginImage from "../src/assets/images/login.jpg";
 
 const Validate = () => {
   const [username, setUserName] = useState("");
@@ -24,7 +25,9 @@ const Validate = () => {
     <>
       <h1 className="heading">Form Component</h1>
       <div className="card">
-        
+        <div className="image-container">
+          <img className="card-image" src={loginImage} alt="" />
+        </div>
       </div>
     </>
   );
