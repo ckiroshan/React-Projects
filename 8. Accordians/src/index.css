@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Freeman&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+  --main-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--main-font);
+}
