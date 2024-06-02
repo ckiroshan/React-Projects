@@ -9,9 +9,106 @@
 :root {
   /* Fonts */
   --main-font: "Freeman", "Roboto", "Courier New", Courier, monospace;
+  --default-font-size: 1rem;
+  --heading-font-size: 4rem;
+  --header-font-size: 1.5rem;
+  --card-info-font-size: 1.2rem;
+
+  /* Colors */
+  --back-color: #d3cce3 linear-gradient(to right, #d3cce3, #e9e4f0);
+  --text-color: #fff;
+  --card-bg-color: #c5b4e3; /* Light purple */
+  --card-hover-bg-color: #a678f5; /* Slightly darker purple */
+  --icon-color: #f0a500;
+  --icon-active-color: #ff5733;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Dimensions */
+  --container-width: 40rem;
+  --card-width: 38rem;
+
+  /* Spacing */
+  --margin-small: 20px;
+  --margin-medium: 80px;
+  --padding-small: 20px;
 }
 
 /* Base Styles */
 body {
   font-family: var(--main-font);
+  background: var(--back-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typography */
+.heading {
+  color: var(--text-color);
+  text-shadow: 2px 1px 10px var(--shadow-color);
+  font-size: var(--heading-font-size);
+  line-height: 88px;
+  text-align: center;
+  margin-top: calc(-1 * var(--margin-medium));
+  margin-bottom: var(--margin-medium);
+}
+
+p.card-info {
+  width: var(--card-width);
+  padding: var(--padding-small) 0;
+  line-height: 1.3;
+  font-size: var(--card-info-font-size);
+}
+
+/* Layout */
+.container {
+  border: 2px solid var(--text-color);
+}
+
+/* Accordion Styles */
+.accordion-card {
+  margin: var(--margin-small);
+  padding: var(--padding-small);
+  background: var(--card-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.accordion-card:hover {
+  background: var(--card-hover-bg-color);
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: var(--container-width);
+  cursor: pointer;
+  font-size: var(--header-font-size);
+}
+
+.icon {
+  font-size: var(--header-font-size);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.accordion-card.active .icon {
+  color: var(--icon-active-color);
+  transform: rotate(180deg);
+}
+
+.accordion-card .icon {
+  color: var(--icon-color);
+}
+
+.accordion-card .content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: max-height 0.5s ease-in-out;
 }
