@@ -1,9 +1,9 @@
-import Main from "./components/Main";
+import Navigation from "./Navigation/Nav";
 
 function App() {
   return (
     <>
-      <Main />
+      <Navigation />
     </>
   );
 }
