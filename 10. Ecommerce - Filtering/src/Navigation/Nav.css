@@ -1,4 +1,4 @@
-nav{
+nav {
   display: flex;
   border-bottom: 2px solid #f3f3f3;
   justify-content: space-around;
@@ -17,7 +17,7 @@ input {
   border-radius: 10px;
   position: relative;
   width: 20rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .nav-icons {
